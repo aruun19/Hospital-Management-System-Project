@@ -1,0 +1,9 @@
+#buss{
+    bottom: 0;
+    right: 0;
+}
+.table{
+    border: solid black ;
+    background-color:lightyellow;
+    border: solid lightcoral;
+}

@@ -1,0 +1,38 @@
+.container{
+    margin: auto;
+    width: 50%;
+    
+  padding: 50px 50px 50px 50px;
+}
+.form-group{
+    margin: auto;
+    width: 50%;
+  border: 3px solid rgb(0, 122, 128);
+  padding: 50px 50px 50px 50px;
+
+}
+
+.textbox{
+    margin: solid black;
+
+}
+body{
+    background-image: url(/assets/Images/index-01_img-02.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    align-items: center;
+   
+    
+  padding: 50px 50px 50px 50px;
+
+}
+p{
+    color: white;
+}

@@ -1,0 +1,52 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table'>
+                        <th>Doctor Name</th>
+                        <th>Specialization</th>
+                        <th>Department</th>
+                        <th>City</th>
+                        <th>contact Number</th>
+                        <th>Available Time</th>
+                        <th>Action</th>
+                        
+                    </tr>
+            
+                </thead>
+                
+                <tr *ngFor="let doctlist of doctor">
+                    <td>{{doctlist.dname}}</td>
+                    <td>{{doctlist.specilization}}</td>
+                    <td>{{doctlist.department}}</td>
+                    <td>{{doctlist.city}}</td>
+                    <td>{{doctlist.contactno}}</td>
+                    <td>{{doctlist.availableTime}}</td>
+                   
+                    <button type="button" class="btn btn-md btn-success" (click)="book(doctlist.dId)">Book</button>&nbsp;&nbsp;
+               
+
+                    
+            
+               
+                </tr>
+            </table>
+            <div class="text-right">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+
+            </div>
+          
+            <button class="atu-btn-submit btn btn-info" (click) = "viewAppointments()" id="bus">View Your Appointments</button>
+
+
+        </div>
+    </div>
+    
+</div>
+<div id="buss"><button class="atu-btn-submit btn btn-danger" (click) = "logout()" id="buss">Logout</button></div>
+
+ 

@@ -1,0 +1,42 @@
+<div>
+<button class="atu-btn-submit btn btn-primary" (click) = "goBack()" >Go Back</button>
+</div>
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table'>
+                        <th>Patient</th>
+                        <th>Disease</th>
+                        <th>Contact</th>
+                        <th>Gender</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tr *ngFor="let patlist of patient">
+                    <td>{{patlist.pName}}</td>
+                    <td>{{patlist.diseaseName}}</td>
+                    <td>{{patlist.contactNumber}}</td>
+                    <td>{{patlist.gender}}</td>
+                    <td>{{patlist.address}}</td>
+                    <td>{{patlist.email}}</td>
+                    <button type="button" class="btn btn-md btn-success" (click)="updatePatient(patlist.pId)">Update</button>&nbsp;&nbsp;
+                   
+                    <button type="button" class="btn btn-md btn-danger" (click) = "deletePatient(patlist.pId)">Delete</button>
+                </tr>
+            </table>
+
+            </div>
+            <button class="atu-btn-submit btn btn-info" (click) = "addPatient()" id="des">Add Patient</button>
+
+        </div>
+        <div class="text-right">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+    </div>
+</div>

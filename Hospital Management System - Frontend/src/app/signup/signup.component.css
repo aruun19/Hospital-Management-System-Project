@@ -1,0 +1,19 @@
+.row{
+    margin-left: 200px;
+    align-items: center;
+}
+.main-content{
+    background-color: rgb(133, 179, 198);
+    align-items: center;
+    
+}
+.section-content section-content-p30{
+    align-items: center;
+}
+.container-fluid{
+    align-items: center;
+}
+
+#buttonn{
+    margin-left: 430px;
+}

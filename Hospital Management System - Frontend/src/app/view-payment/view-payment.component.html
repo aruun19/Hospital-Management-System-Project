@@ -1,0 +1,49 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table'>
+                        <th>Payment Id</th>
+                        <th>Patient Id</th>
+                        <th>Consultation Fee</th>
+                        <th>Card Number</th>
+                        <th>CVV</th>
+                        <th>Card Holder Name</th>
+                        <th>Action</th>
+                        
+                        
+                    </tr>
+         
+                </thead>
+                
+                <tr *ngFor="let paymentlist of payment">
+                    <td>{{paymentlist.paymentId}}</td>
+                    <td>{{paymentlist.pId}}</td>
+                    <td>{{paymentlist.consultationFee}}</td>
+                    <td>{{paymentlist.cardNumber}}</td>
+                    <td>{{paymentlist.cvv}}</td>
+                    <td>{{paymentlist.cardHolderName}}</td>
+                   
+                    
+                    
+                   
+                    <button type="button" class="btn btn-md btn-danger" (click) = "deletepayment(paymentlist.paymentId)">Delete</button>
+                </tr>
+            </table>
+            <div class="text-right">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+
+            </div>
+
+            <button class="atu-btn-submit btn btn-info" (click) = "addpayment()" id="add">Add Payment</button>
+
+        </div>
+    </div>
+</div>
+
+ 
+

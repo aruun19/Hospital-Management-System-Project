@@ -1,0 +1,12 @@
+.table{
+    border: solid black ;
+    background-color: aqua;
+}
+#main{
+    background-color: azure;
+}
+#but{
+    align-items: center;
+    display: flex;
+    margin-left: 550px;
+}

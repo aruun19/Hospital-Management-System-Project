@@ -1,0 +1,88 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+           
+            <div class="row">
+                <form #spForm="ngForm" (ngSubmit)="onSubmit()">
+                    <div *ngIf="patient.pId==0"><h1>Add Patient</h1></div>
+                    <div *ngIf="patient.pId>0"><h1>Update Patient</h1></div>
+                    <div class="form-group row" *ngIf="patient.pId>0">
+                        <label class ="col-sm-6 col-form-label">Patient ID</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="pId" [(ngModel)]="patient.pId" />
+                           
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">Patient Name</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="pname" [(ngModel)]="patient.pName"  />
+                           
+                        </div> 
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">Disease Name</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="disease" [(ngModel)]="patient.diseaseName"/>
+                           
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">Contact Number</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="contactno" [(ngModel)]="patient.contactNumber" />
+                           
+                        </div> 
+                    </div>
+                    
+                    
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">Gender</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="gender" [(ngModel)]="patient.gender" />
+                           
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">Address</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="address" [(ngModel)]="patient.address" />
+                           
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">email</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="email" [(ngModel)]="patient.email" />
+                           
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">username</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="username" [(ngModel)]="patient.username" />
+                           
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">password</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="pwd" [(ngModel)]="patient.password" />
+                           
+                        </div> 
+                    </div>
+                    
+                    
+                    
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-4"><button type ="submit"class="btn btn-info">Submit</button></div>
+                        <div class="col-sm-4"><button type="reset" class="btn btn-info">Reset</button></div>
+                      </div>
+                    </form>
+
+            </div>
+            </div>
+            </div>
+            </div>

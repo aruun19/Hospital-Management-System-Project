@@ -1,0 +1,33 @@
+
+
+.container {
+    
+    background-color: rgba(2, 59, 192, 0.896);
+    padding: 90px 50px 50px 50px;
+    border-radius: 10px;
+    width: 400px;
+    align-items: center;
+}
+body{
+    background-image: url("/assets/Images/adminope.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+p{
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    color: beige;
+}
+#logout{
+   position:absolute;
+   top:0px;
+   right:0px;
+}
+
+

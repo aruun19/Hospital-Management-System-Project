@@ -1,0 +1,70 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+           
+            <div class="row">
+                <form #spForm="ngForm" (ngSubmit)="onSubmit()">
+                    <div *ngIf="doctor.dId==0"><h1>Add Doctor</h1></div>
+                    <div *ngIf="doctor.dId>0"><h1>Update Doctor</h1></div>
+                    <div class="form-group row" *ngIf="doctor.dId!=0">
+                        <label class ="col-sm-6 col-form-label">Doctor ID</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="dId" [(ngModel)]="doctor.dId" />
+                           
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">Doctor Name</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="dname" [(ngModel)]="doctor.dname"  />
+                           
+                        </div> 
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">Specilization</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="specilization" [(ngModel)]="doctor.specilization"/>
+                           
+                        </div> 
+                    </div>
+                    
+                    
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">Department</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="Department" [(ngModel)]="doctor.department" />
+                           
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">City</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="city" [(ngModel)]="doctor.city" />
+                           
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">Contactno</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="contactno" [(ngModel)]="doctor.contactno" />
+                           
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label class ="col-sm-6 col-form-label">AvailableTime</label>
+                        <div class ="col-sm-6">
+                            <input type ="text" name="availableTime" [(ngModel)]="doctor.availableTime"  />
+                           
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4"><button type ="submit"class="btn btn-info">Submit</button></div>
+                        <div class="col-sm-4"><button type="reset" class="btn btn-info">Reset</button></div>
+                      </div>
+                    </form>
+
+            </div>
+            </div>
+            </div>
+            </div>

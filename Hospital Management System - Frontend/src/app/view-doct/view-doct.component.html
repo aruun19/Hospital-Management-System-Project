@@ -1,0 +1,61 @@
+<div>
+    <button class="atu-btn-submit btn btn-primary" (click) = "goBack()" >Go Back</button>
+    </div>
+<div class="main-content" id="main">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table'>
+                        <th>Doctor Name</th>
+                        <th>Specialization</th>
+                        <th>Department</th>
+                        <th>City</th>
+                        <th>contact Number</th>
+                        <th>Available Time</th>
+                        <th>Action</th>
+                        
+                    </tr>
+            
+                </thead>
+                
+                <tr *ngFor="let doctlist of doctor">
+                    <td>{{doctlist.dname}}</td>
+                    <td>{{doctlist.specilization}}</td>
+                    <td>{{doctlist.department}}</td>
+                    <td>{{doctlist.city}}</td>
+                    <td>{{doctlist.contactno}}</td>
+                    <td>{{doctlist.availableTime}}</td>
+                   
+                    <button type="button" class="btn btn-md btn-success" (click)="updateDoctor(doctlist.dId)">Update</button>&nbsp;&nbsp;
+              
+
+                  
+                    <button type="button" class="btn btn-md btn-danger" (click) = "deleteDoct(doctlist.dId)">Delete</button>
+               
+
+                    
+            
+               
+                </tr>
+            </table>
+
+            </div>
+          
+            <button class=" btn btn-info" (click) = "addDoct()"id="but" >Add Doctor</button>
+        
+
+       
+
+        </div>
+        <div class="text-right">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+    </div>
+    
+       
+</div>
+
+ 

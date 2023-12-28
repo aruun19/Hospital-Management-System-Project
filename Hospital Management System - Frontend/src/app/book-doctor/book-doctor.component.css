@@ -1,0 +1,17 @@
+.table{
+    border: solid black ;
+    background-color: aqua;
+}
+#main{
+    background-color: azure;
+}
+#bus{
+    align-items: center;
+    display: flex;
+    margin-left: 550px;
+}
+#buss{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+}

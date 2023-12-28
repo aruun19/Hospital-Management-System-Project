@@ -1,0 +1,45 @@
+<div class="main-content" id="main">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table'>
+                        <th>Booking Id</th>
+                        <th>Doctor Name</th>
+                        <th>Specialization</th>
+                       
+                        <th>contact Number</th>
+                      
+                        
+                        
+                    </tr>
+            
+                </thead>
+                
+                <tr *ngFor="let doc of docList">
+                   <td>{{doc.bookingid}}</td>
+                   
+                   <td>{{doc.dname}}</td>
+                    <td>{{doc.specilization}}</td>
+                    <td>{{doc.contactno}}</td>
+                   
+                   
+               
+                </tr>
+            </table>
+            <div class="text-right">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+
+           
+    </div>
+</div>
+<div id="buss"><button class="atu-btn-submit btn btn-primary" (click) = "goBack()" id="buss">Go Back</button></div>
+
+ 
+
+
+ 
+

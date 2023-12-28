@@ -1,0 +1,53 @@
+<div>
+    <button class="atu-btn-submit btn btn-primary" (click) = "goBack()" >Go Back</button>
+    </div>
+
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table'>
+                        <th>Staff Name</th>
+                        <th>Jobrole</th>
+                        <th>Salary</th>
+                        <th>Experience</th>
+                        <th>Date of Joining</th>
+                        <th>Qualification</th>
+                        <th>Contact</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                        
+                    </tr>
+            
+                </thead>
+                
+                <tr *ngFor="let stafflist of staff">
+                    <td>{{stafflist.sName}}</td>
+                    <td>{{stafflist.jobrole}}</td>
+                    <td>{{stafflist.salary}}</td>
+                    <td>{{stafflist.exp}}</td>
+                    <td>{{stafflist.doj}}</td>
+                    <td>{{stafflist.qualification}}</td>
+                    <td>{{stafflist.contact}}</td>
+                    <td>{{stafflist.address}}</td>
+                    
+                    <button type="button" class="btn btn-md btn-success" (click)="updateStaff(stafflist.sId)">Update</button>&nbsp;&nbsp;
+                   
+                    <button type="button" class="btn btn-md btn-danger" (click) = "deletestaff(stafflist.sId)">Delete</button>
+                </tr>
+            </table>
+            <div class="text-right">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+
+            </div>
+            <button class="atu-btn-submit btn btn-info" (click) = "addstaff()" id="bok">Add staff</button>
+
+        </div>
+    </div>
+</div>
+
+ 

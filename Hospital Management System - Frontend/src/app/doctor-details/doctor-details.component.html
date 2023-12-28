@@ -1,0 +1,33 @@
+<div class="panel panel-success" >
+    <table  class="table table-bordered">
+        <tr><th><b>Doctor Name</b></th>
+            <th><b>specilization</b></th>
+            <th><b>Department</b></th>
+            <th><b>city</b></th>
+            <th><b>contactno</b></th>
+            <th><b>availableTime</b></th>
+            <th>Delete Doctor</th>
+         </tr>
+         <tr *ngFor="let doctor of doctorData">
+             <td>{{doctor.dname}}</td>
+             <td>{{doctor.specilization}}</td>
+             <td>{{doctor.department}}</td>
+             <td>{{doctor.city}}</td>
+             <td>{{doctor.contactno}}</td>
+             <td>{{doctor.availableTime}}</td>
+             <td><input type="button" class="btn btn-primary btn-normal"  value="deletedoctor" (click)="deletedoctor()"></td>
+             
+            </tr>
+            <!-- <tfoot>
+              <tr>
+                  <td colspan="4">
+                      <mfBootstrapPaginator ></mfBootstrapPaginator>
+                  </td>
+              </tr>
+          </tfoot> -->
+
+</table> 
+
+</div>
+
+<button class="btn btn-primary btn-normal" style="background-color:black;margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%" (click)="addDoctor()" class="btn btn-primary">Add doctor</button>&nbsp;&nbsp;&nbsp;&nbsp;

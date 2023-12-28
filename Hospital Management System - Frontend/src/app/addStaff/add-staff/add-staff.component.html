@@ -1,0 +1,89 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+
+            <div class="row">
+                <form #spForm="ngForm" (ngSubmit)="onSubmit()">
+                    <div *ngIf="staff.sId==0">
+                        <h1>Add Staff</h1>
+                    </div>
+                    <div *ngIf="staff.sId>0">
+                        <h1>Update Staff</h1>
+                    </div>
+                    <div class="form-group row" *ngIf="staff.sId!=0">
+                        <label class="col-sm-6 col-form-label">Staff ID</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="sId" [(ngModel)]="staff.sId" />
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Staff Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="sName" [(ngModel)]="staff.sName" />
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Jobrole</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="jobrole" [(ngModel)]="staff.jobrole" />
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Salary</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="salary" [(ngModel)]="staff.salary" />
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Experience</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="exp" [(ngModel)]="staff.exp" />
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Date of Joining</label>
+                        <div class="col-sm-6">
+                            <input type="date" name="doj" [(ngModel)]="staff.doj" />
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Qualification</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="qualification" [(ngModel)]="staff.qualification" />
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Contact</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="contact" [(ngModel)]="staff.contact" />
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Address</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="address" [(ngModel)]="staff.address" />
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4"><button type="submit" class="btn btn-info">Submit</button></div>
+                        <div class="col-sm-4"><button type="reset" class="btn btn-info">Reset</button></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
